@@ -1,0 +1,23 @@
+﻿@model Apranq
+
+
+    <tr>
+          <td> <img  src="@Model.img" alt="@Model.Name" style="width:100px; height:150px;"/>  </td>
+          <td> Name:           @Model.Name     </td>
+          <td> Company:        @Model.categoryA.Name </td>
+          <td> Price:          @Model.Price    </td>
+          <td> Desc:           @Model.Available</td>
+          <td> LongDesc        @Model.Longdesc </td>
+          <td> Available       @Model.Available</td>
+          <td> Time Create     @Model.Apranctime</td>
+          <td>
+           
+ <a class="btn btn-primari" style="width:100%" asp-controller="Shop" asp-action="Addproduct" asp-route-ide=@Model.Id >Add to cart
+
+ </a>
+    
+    </td>
+       
+    </tr>
+  
+    

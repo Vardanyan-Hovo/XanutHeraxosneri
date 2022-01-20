@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Apranq>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table class="table table-striped Table-bordered" style="width:100%">
+     <thead >
+
+      <tr>
+              <th > Picturas      </th>
+              <th>  Name    </th>
+              <th>  Company  </th>
+              <th>  Price    </th>
+              <th>  LongDesc </th>
+              <th>   </th>
+              <th>   </th>
+              <th>   </th>
+              
+       </tr>
+    </thead>
+    <tbody>
+        @foreach(Apranq x in Model)
+            {
+         @Html.Partial("Product1",x);
+            }
+
+    </tbody>
+</table>

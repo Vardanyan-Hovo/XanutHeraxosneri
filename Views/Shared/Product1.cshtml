@@ -1,0 +1,32 @@
+﻿@model Apranq
+    <tr style="contain">
+          <td class="col-2"> <img src="@Model.img" style="width:150px; max-height:250px" alt="@Model.Name"/>  </td>
+          <td class="col-2">        @Model.Name     </td>
+          <td class="col-2">        @Model.categoryA.Name </td>
+          <td class="col-1">        @Model.Price    </td>
+          <td class="col-2">        @Model.Longdesc </td>
+          
+          <td col-1>
+              <div class="btn-group" role="group">
+                 <a class="btn btn-primari " asp-action="Create" asp-controller="Baza">
+                 <i class="bi bi-file-earmark-plus"></i> </a>
+              </div>
+          </td>
+
+          <td class="col-1">
+              <div class="btn-group" role="group">
+                   <a class="btn btn-primari " asp-action="Edit" asp-controller="Baza">
+                   <i class="bi bi-pencil-square"></i></a>
+              </div>
+          </td>
+         
+          <td class="col-1">
+              <div class="btn-group" role="group">
+                 <a class="btn btn-primari" asp-action="delete" asp-controller="Baza">
+                    <i class="bi bi-trash"></i>
+                 </a>
+              </div>
+          </td>
+       </tr>
+  
+    

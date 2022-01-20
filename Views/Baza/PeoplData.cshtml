@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Cart>
+@{
+    ViewData["Title"] = "Basket Page";
+}
+
+@{
+    if (Model.Any() == null)
+        Console.WriteLine("\n\n\n Not Basket\n\n\n");
+    else Console.WriteLine("\n\n\n in Basket is there anything \n\n\n");
+
+    if (Model.Count() != 0)
+    {
+
+        <table class="table table-striped Table-bordered" style="width:100%">
+            <thead >
+
+                <tr>
+                    <th>            </th>
+                    <th> Name       </th>
+                    <th> Company    </th>
+                    <th> Price      </th>
+                    
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var x in Model)
+                {
+                  @Html.Partial("Cart",x)
+                }
+
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h4>You did not choose to buy the product</h4>
+    }
+}

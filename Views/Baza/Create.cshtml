@@ -1,0 +1,73 @@
+﻿@model People
+
+<form method="post" >
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+           <h2 class="text-primary pl-3">Please sign in</h2>
+           <hr/>
+        </div>
+                <div class="for-group">
+                    
+                     <label  asp-for="PeopleName">Name</label>
+                     <div class="col-md-5">
+                         <input type="text" class="form-control" asp-for="PeopleName" >
+                         <span asp-validation-for="PeopleName"></span>
+                     </div>
+                </div>
+
+                <div class="for-group">
+                  <label  asp-for="LastName">Last Name</label>
+                  <div class="col-md-5">
+                  <input type="text" class="form-control" asp-for="LastName" >
+                  <span asp-validation-for="LastName"></span>
+                 </div>
+              </div>
+
+                <div class="for-group">
+                  <label  asp-for="Age">Age</label>
+                  <div class="col-md-5">
+                  <input type="text" class="form-control" asp-for="Age">    
+                  <span asp-validation-for="Age"></span>
+                  </div>
+                </div>
+
+  @*     
+                  <div class="form-floating">
+                  <label asp-for="Email">Email address</label>
+                  <input type="email" class="form-control" asp-for="Email">
+                  <span asp-validation-for="Email"></span>
+                </div>
+  *@
+
+             <div class="for-group">
+                    <label asp-for="Email"></label>
+                    <div class="col-md-5">
+                        <input class="form-control" asp-for="Email"/>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+             </div>
+
+                <div class="for-group">
+                    <label asp-for="Password">Password</label>
+                    <div class="col-md-5">
+                    <input type="password" class="form-control" asp-for="Password" placeholder="Password">
+                    <span asp-validation-for="Password"></span>
+                    </div>
+                </div>
+
+                   @* <div class="checkbox mb-3">
+                      <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                      </label>
+                    </div>*@
+                    <br/>
+                    
+    <input class="btn btn-primary" type="submit" style="width:100px" value="Sign in"/>
+    </div>
+  </form>
+
+  @section Scripts{
+      @{
+          <partial name="_ValidationScriptsPartial"/>
+       }
+  }
